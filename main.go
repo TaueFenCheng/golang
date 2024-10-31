@@ -3,12 +3,22 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	fmt.Println("world")
+	i, err := strconv.Atoi("-42")
+	s := strconv.Itoa(-42)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(i)
+	fmt.Println(s)
 
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
