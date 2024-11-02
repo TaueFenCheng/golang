@@ -9,6 +9,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
+	"errors"
 	"main2"
 )
 
@@ -29,11 +30,15 @@ func main() {
 	// 引用另一个项目中的包
 	main2.Main2Module()
 
+	main2.Hello("张三")
+
 	i, err := strconv.Atoi("-42")
 	s := strconv.Itoa(-42)
 
 	if err != nil {
 		fmt.Println(err)
+		message := errors.New("出现错误")
+		fmt.Printf("%s", message)
 	}
 
 	fmt.Println(i)
