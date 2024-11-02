@@ -2,6 +2,13 @@ module demo
 
 go 1.23.2
 
+// 引用另一个项目中的包
+
+require main2 v0.0.0
+
+replace main2 => ./main2
+
+
 require github.com/gin-gonic/gin v1.10.0
 
 require (

@@ -5,11 +5,30 @@ import (
 	"net/http"
 	"strconv"
 
+	SubModule "demo/submodule"
+
 	"github.com/gin-gonic/gin"
+
+	"main2"
 )
+
+func Demo() {
+	fmt.Println("from demo module")
+}
 
 func main() {
 	fmt.Println("world")
+
+	// 引用同一个项目中的不同文件夹下的包
+	SubModule.SubModule()
+	SubModule.SubModule2()
+	// 不同go 文件下 方法
+
+	SubModule.Sub2Module()
+
+	// 引用另一个项目中的包
+	main2.Main2Module()
+
 	i, err := strconv.Atoi("-42")
 	s := strconv.Itoa(-42)
 
