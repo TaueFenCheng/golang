@@ -27,6 +27,9 @@ func main() {
 
 	SubModule.Sub2Module()
 
+	// 当前文件引用
+	Demo()
+
 	// 引用另一个项目中的包
 	main2.Main2Module()
 
