@@ -8,7 +8,6 @@ require main2 v0.0.0
 
 replace main2 => ./main2
 
-
 require github.com/gin-gonic/gin v1.10.0
 
 require (
@@ -33,6 +32,7 @@ require (
 	github.com/ugorji/go/codec v1.2.12 // indirect
 	golang.org/x/arch v0.8.0 // indirect
 	golang.org/x/crypto v0.23.0 // indirect
+	golang.org/x/example/hello v0.0.0-20241014184706-d7b0ac127859 // indirect
 	golang.org/x/net v0.25.0 // indirect
 	golang.org/x/sys v0.20.0 // indirect
 	golang.org/x/text v0.15.0 // indirect

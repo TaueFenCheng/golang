@@ -2,10 +2,10 @@ package main
 
 import (
     "fmt"
-
     "golang.org/x/example/hello/reverse"
+    "Int"
 )
 
 func main() {
-    fmt.Println(reverse.String("Hello"),reverse.Int(24601))
+    fmt.Println(reverse.String("Hello"),Int.Int(2323))
 }
