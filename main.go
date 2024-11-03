@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"net/http"
+	_ "net/http"
 	"strconv"
 
 	SubModule "demo/submodule"
 
-	"github.com/gin-gonic/gin"
+	_ "github.com/gin-gonic/gin"
 
 	"errors"
 	"main2"
@@ -44,15 +44,15 @@ func main() {
 		fmt.Printf("%s", message)
 	}
 
-	fmt.Println(i)
 	fmt.Println(s)
+	fmt.Println(i)
 
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	// r := gin.Default()
+	// r.GET("/ping", func(c *gin.Context) {
+	// 	c.JSON(http.StatusOK, gin.H{
+	// 		"message": "pong",
+	// 	})
+	// })
+	// r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 
 }
